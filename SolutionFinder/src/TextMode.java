@@ -8,6 +8,7 @@ public enum TextMode {
     private final int CODE;
     private static final String PREFIX = "\033[";
     private static final String POSTFIX = "m";
+    public static boolean enabled = true;
 
     TextMode(int code) {
         CODE = code;
@@ -15,7 +16,7 @@ public enum TextMode {
 
     @Override
     public String toString() {
-        return PREFIX + CODE + POSTFIX;
+        return enabled ? PREFIX + CODE + POSTFIX : "";
     }
 
 
