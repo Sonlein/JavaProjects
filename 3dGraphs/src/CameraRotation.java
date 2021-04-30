@@ -30,7 +30,6 @@ public class CameraRotation {
         double x = - Math.sin(Math.toRadians(yaw)) * rotationRadius + center.getX();
         double y = Math.sin(Math.toRadians(pitch)) * DEFAULT_RADIUS * distance + center.getY();
         double z = - Math.cos(Math.toRadians(yaw)) * rotationRadius + center.getZ();
-        System.out.printf("%f %f %f%n", x, y, z);
         camera.setTranslateX(x);
         camera.setTranslateY(y);
         camera.setTranslateZ(z);
