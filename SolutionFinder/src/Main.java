@@ -33,6 +33,23 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Включить отображение цветов? \n0 - нет \n1 - да \nВНИМАНИЕ: Цвета не отображаются при использовании встроенной консоли Windows");
+            try {
+                int a = Integer.parseInt(scanner.nextLine());
+                if (a == 0) {
+                    TextMode.enabled = false;
+                    break;
+                } else if (a == 1) {
+                    break;
+                }
+            } catch (Exception ignored) {
+
+            }
+            System.out.println("Неверный ввод!\n");
+        }
+
         System.out.println("\nНажмите Enter, чтобы начать поиск решения\n");
         scanner.nextLine();
 
