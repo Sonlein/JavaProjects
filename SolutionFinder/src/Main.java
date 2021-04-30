@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Scanner;
 
 public class Main {
 
@@ -30,6 +31,10 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nНажмите Enter, чтобы начать поиск решения\n");
+        scanner.nextLine();
 
         VerifiedValue.initialize(NUMBER);
 
@@ -65,6 +70,9 @@ public class Main {
         }
         vv = new VerifiedValue(solution);
         System.out.printf(OUTPUT, "четвертым", System.currentTimeMillis() - startTime, vv.getVerifiedValue(), vv.getCorrectDigitsAmount());
+
+        System.out.println("\nНажмите Enter, чтобы закрыть окно\n");
+        scanner.nextLine();
 
     }
 
