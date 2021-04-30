@@ -46,7 +46,7 @@ public class VerifiedValue {
         try {
             return Files.readString(path);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("\nФайл с верифицированным решением не найден. Проверка значения невозможна\n");;
         }
         return "";
     }
