@@ -16,6 +16,7 @@ public class Main {
         } catch (AbstractException ae) {
             System.out.println(ae.getMessage());
         }
+        scanner.nextLine();
     }
 
 }
